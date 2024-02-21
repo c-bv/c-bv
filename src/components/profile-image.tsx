@@ -24,7 +24,7 @@ export const ProfileImage = (props: TProfileImage) => {
                 })}
             >
                 <img
-                    src='/src/assets/img/profile.jpg'
+                    src='/img/profile.jpg'
                     alt='A photo of Charles'
                     className='rounded-full'
                     width={props.size === 'small' ? 36 : 64}

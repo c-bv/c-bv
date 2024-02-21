@@ -20,24 +20,7 @@ export const Footer = () => {
                             </Link>
                         </div>
 
-                        <a
-                            href='https://twitter.com/delba_oliveira'
-                            className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
-                        >
-                            Twitter
-                        </a>
-                        <a
-                            href='https://www.youtube.com/delba'
-                            className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
-                        >
-                            YouTube
-                        </a>
-                        <a
-                            href='https://github.com/delbaoliveira'
-                            className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
-                        >
-                            GitHub
-                        </a>
+                      
                     </div>
                 </div>
             </div>
