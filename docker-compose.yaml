@@ -1,0 +1,20 @@
+version: '3.9'
+services:
+    client:
+        image: ghcr.io/c-bv/c-bv:main
+        container_name: portfolio-client
+        restart: unless-stopped
+        labels:
+            - traefik.enable=true
+            - traefik.http.routers.portfolio-client.rule=Host(`me.c-bv.dev`)
+            - traefik.http.routers.portfolio-client.entrypoints=websecure
+            - traefik.http.services.portfolio-client.loadbalancer.server.port=80
+        networks:
+            - traefik
+        expose:
+            - 80
+
+networks:
+    default:
+        name: traefik
+        external: true
