@@ -20,7 +20,15 @@ export const Footer = () => {
                             </Link>
                         </div>
 
-                      
+                        <a
+                            href='https://www.linkedin.com/in/charlesbouveret'
+                            className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
+                        >
+                            LinkedIn
+                        </a>
+                        <a href='https://github.com/c-bv' className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}>
+                            GitHub
+                        </a>
                     </div>
                 </div>
             </div>
@@ -28,20 +36,16 @@ export const Footer = () => {
             <p className='mt-8 text-gray-600'>
                 Built with{' '}
                 <a href='https://nextjs.org' className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}>
-                    Next.js
+                    Vite.js
                 </a>
                 ,{' '}
                 <a href='https://mdxjs.com' className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}>
                     MDX
                 </a>
-                ,{' '}
+                and{' '}
                 <a href='https://tailwindcss.com' className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}>
                     Tailwind
                 </a>{' '}
-                and{' '}
-                <a href='https://vercel.com' className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}>
-                    Vercel
-                </a>
             </p>
         </div>
     );
