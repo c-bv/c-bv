@@ -33,7 +33,6 @@ jobs:
               uses: docker/metadata-action@v5.5.1
               with:
                   images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-                  tags: type=sha,prefix=commit
 
             - name: Build and push Docker images
               uses: docker/build-push-action@v5.1.0
@@ -61,5 +60,5 @@ jobs:
                       git fetch --all
                       git checkout origin/main -- docker-compose.yaml
                       docker login ${{ env.REGISTRY }} -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
-                      docker-compose pull
-                      docker-compose up -d
+                      docker rmi -f ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main
+                      docker compose up -d --force-recreate
