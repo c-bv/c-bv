@@ -56,6 +56,6 @@ jobs:
                   key: ${{ secrets.SSH_KEY }}
                   port: ${{ secrets.SSH_PORT }}
                   script: |
-                      cd ~/${{ env.REPO_NAME }}
+                      cd /opt/stacks/${{ env.REPO_NAME }}
                       docker login ${{ env.REGISTRY }} -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
                       docker compose up -d --force-recreate
