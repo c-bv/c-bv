@@ -1,7 +1,7 @@
 export const Contact = () => {
     return (
-        <>
-            <h1 className='mb-4 text-3xl font-bold'>Contact page</h1>
-        </>
+        <div className='h-48 py-10'>
+            <span className='italic text-teal-100/90'>You should know where to find me by now...</span>
+        </div>
     );
 };

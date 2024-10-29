@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
+
 import { FOCUS_VISIBLE_OUTLINE, LINK_SUBTLE_STYLES } from '@lib/constants';
 import { cn } from '@lib/utils';
-import { Link } from 'react-router-dom';
 
 export const Footer = () => {
     return (
@@ -8,45 +9,36 @@ export const Footer = () => {
             <div className='text-gray-500'>
                 <div className='flex flex-col justify-between font-medium lg:flex-row'>
                     <div className='flex space-x-5'>
-                        <div>
-                            <Link to='/videos' className={cn(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}>
-                                Videos
-                            </Link>
-                        </div>
-
-                        <div>
-                            <Link to='/blog' className={cn(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}>
-                                Posts
-                            </Link>
-                        </div>
-
+                        <Link to='/contact' className={cn(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}>
+                            Contact
+                        </Link>
+                        <a
+                            href='https://open.spotify.com/user/kabz_b?si=566151fa23e64aad'
+                            target='_blank'
+                            rel='noreferrer'
+                            className={cn(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
+                        >
+                            Music
+                        </a>
                         <a
                             href='https://www.linkedin.com/in/charlesbouveret'
+                            target='_blank'
+                            rel='noreferrer'
                             className={cn(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
                         >
                             LinkedIn
                         </a>
-                        <a href='https://github.com/c-bv' className={cn(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}>
+                        <a
+                            href='https://github.com/c-bv'
+                            target='_blank'
+                            rel='noreferrer'
+                            className={cn(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
+                        >
                             GitHub
                         </a>
                     </div>
                 </div>
             </div>
-
-            <p className='mt-8 text-gray-600'>
-                Built with{' '}
-                <a href='https://nextjs.org' className={cn(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}>
-                    Vite.js
-                </a>
-                ,{' '}
-                <a href='https://mdxjs.com' className={cn(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}>
-                    MDX
-                </a>
-                and{' '}
-                <a href='https://tailwindcss.com' className={cn(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}>
-                    Tailwind
-                </a>{' '}
-            </p>
         </div>
     );
 };

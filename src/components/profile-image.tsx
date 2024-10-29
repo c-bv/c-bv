@@ -1,4 +1,5 @@
 import { cn } from '@lib/utils';
+import { useNavigate } from 'react-router-dom';
 
 type TProfileImage = {
     size: 'small' | 'large';
@@ -6,15 +7,17 @@ type TProfileImage = {
 };
 
 export const ProfileImage = (props: TProfileImage) => {
+    const navigate = useNavigate();
     return (
         <div
             className={cn('rounded-full bg-gradient-to-tl from-emerald-800/60 to-teal-400/60 shadow-lg', {
                 'p-[2px]': props.size === 'small',
                 'p-[3px]': props.size === 'large',
-                'group transform transition ease-out hover:scale-105 hover:from-emerald-800 hover:to-teal-400 hover:shadow-teal-500/25 active:translate-y-px':
+                'group transform cursor-pointer transition ease-out hover:scale-105 hover:from-emerald-800 hover:to-teal-400 hover:shadow-teal-500/25 active:translate-y-px':
                     props.isInteractive,
                 'ring-[5px] ring-emerald-500/10': !props.isInteractive
             })}
+            onClick={() => props.isInteractive && navigate('/')}
         >
             <div
                 className={cn('rounded-full p-px', {

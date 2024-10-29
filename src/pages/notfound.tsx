@@ -1,7 +1,7 @@
 export const NotFound = () => {
-    return (
-        <>
-            <h1 className='mb-4 text-3xl font-bold'>Not found</h1>
-        </>
-    );
+  return (
+    <div className='h-48 py-10'>
+        <span className='italic text-teal-100/90'>Nice try, 404 :)</span>
+    </div>
+);
 };
