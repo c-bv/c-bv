@@ -59,7 +59,7 @@ export const Layout = () => {
                                             href='https://holis-consulting.com/'
                                         >
                                             <div className='size-6 rounded-md bg-black text-white shadow-lg shadow-teal-900/60 ring-2 ring-teal-400/20 group-hover:shadow-xl group-hover:shadow-teal-700 group-hover:ring-teal-400/30 sm:mb-1'>
-                                                <img src='/public/img/holisMinimized.png' />
+                                                <img src='/img/holisMinimized.png' />
                                             </div>
                                             <h2 className='text-teal-100/60 group-hover:text-teal-100/90'>
                                                 Holis Consulting
